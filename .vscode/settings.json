@@ -1,0 +1,65 @@
+{
+    "typescript.tsserver.nodePath": "node",
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.tsc.autoDetect": "build",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "cSpell.words": [
+        "apikey",
+        "dotenv",
+        "Firestore",
+        "gcloud",
+        "nestjs",
+        "subcollection",
+        "subcollections",
+        "uids"
+    ],
+    "cSpell.ignorePaths": [
+        "**/*package-lock.json",
+        "node_modules/**/*",
+        "dist/**/*",
+        "lib/**/*",
+        "testLib/**/*",
+        ".git/**/*",
+        ".vscode/**/*",
+        "**/*settings.json",
+        "**/.devcontainer/**/*",
+    ],
+    "eslint.format.enable": true,
+    "eslint.options": {
+        "cache": true
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "files.exclude": {
+        "**/.cspell": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/lib/**": true,
+        "**/node_modules": true,
+        "**/testLib": true,
+        "**/*.eslintcache": true,
+    },
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:uma-api}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    },
+    "eslint.workingDirectories": [
+        "./src",
+        "./tests"
+    ],
+    "files.eol": "\n"
+}

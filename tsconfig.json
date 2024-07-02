@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "dist",
+		"target": "ESNext",
+		"module": "NodeNext",
+		"sourceMap": true,
+		"allowJs": false,
+		"alwaysStrict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"*": [
+				"node_modules/*"
+			],
+			"config/*": [
+				"./src/config/*"
+			],
+			"handlers/*": [
+				"./src/handlers/*"
+			],
+			"middleware/*": [
+				"./src/middleware/*"
+			],
+			"schemas/*": [
+				"./src/schemas/*"
+			],
+			"utils/*": [
+				"./src/utils/*"
+			]
+		}
+	},
+	"include": [
+		"src/**/*.ts"
+	]
+}

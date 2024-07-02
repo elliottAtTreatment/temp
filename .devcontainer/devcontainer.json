@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-in-docker
+{
+	// default GID is 1000 and UID is 1000
+	"name": "Docker in Docker",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/typescript:2": {}
+	},
+	"customizations": {
+		// Add VS Code extensions here
+		"vscode": {
+			"extensions": [
+				"atlassian.atlascode",
+				"bierner.markdown-preview-github-styles",
+				"christian-kohler.path-intellisense",
+				"dbaeumer.vscode-eslint",
+				"dsznajder.es7-react-js-snippets",
+				"eamodio.gitlens",
+				"formulahendry.auto-rename-tag",
+				"GitHub.codespaces",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"GitHub.vscode-pull-request-github",
+				"googlecloudtools.cloudcode",
+				"mhutchie.git-graph",
+				"mikestead.dotenv",
+				"ms-azuretools.vscode-docker",
+				"pranaygp.vscode-css-peek",
+				"redhat.fabric8-analytics",
+				"redhat.vscode-yaml",
+				"streetsidesoftware.code-spell-checker",
+				"streetsidesoftware.code-spell-checker-medical-terms",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"WallabyJs.quokka-vscode",
+				"wix.vscode-import-cost",
+				"yzhang.markdown-all-in-one",
+				"EasyCodeAI.chatgpt-gpt4-gpt3-vscode",
+				"alefragnani.Bookmarks",
+				"ms-vscode.azure-repos",
+				"ms-vscode.cpptools-themes",
+				"humao.rest-client",
+				"Orta.vscode-jest"
+			]
+		}
+	},
+	"forwardPorts": [
+		4400,
+		4000,
+		4500,
+		8080,
+		9150,
+		5001,
+		9299
+	],
+	"appPort": [
+		"4345:4345",
+		"4000:4000",
+		"8080:8080",
+		"80:80"
+	],
+	"postCreateCommand": "sudo apt update && sudo apt install openjdk-11-jdk -f -y && npm install -g npm-check-updates && npm install -g firebase-tools && curl https://sdk.cloud.google.com > install.sh && bash install.sh"
+}
